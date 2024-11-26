@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskMaster</title>
+  
+   
+  <style>
+    
+    #task-section {
+    Display: block;
+    Width: 100%;
+    Max-width: 600px;
+    Margin: 20px auto;
+    Padding: 20px;
+    Background-color: #95bad3;
+    Border-radius: 8px;
+    Box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    Font-family: Arial, sans-serif;
+  }
+  
+  /* Headings */
+  #task-section h2, #task-section h3 {
+    Color: #333;
+    Margin-bottom: 10px;
+    Text-align: center;
+  }
+  
+  /* Input fields */
+  #task-section input[type="text"],
+  #task-section input[type="date"],
+  #task-section select {
+    Width: calc(100% - 20px);
+    Padding: 8px;
+    Margin: 10px 0;
+    Font-size: 16px;
+    Border: 1px solid #ddd;
+    Border-radius: 4px;
+    Box-sizing: border-box;
+  }
+  
+  /*Add Task button*/
+  #addTaskBtn {
+    Width: 100%;
+    Padding: 10px;
+    Font-size: 16px;
+    Color: #e72121;
+    Background-color: #4caf50;
+    Border: none;
+    Border-radius: 4px;
+    Cursor: pointer;
+    Transition: background-color 0.3s ease;
+  } 
+  
+  #addTaskBtn:hover {
+    Background-color: #45a049;
+  }
+  
+  /* Error message */
+  #error-message {
+    Color: #d9534f;
+    Font-size: 14px;
+    Display: none;
+  }
+  
+  /* Filter section */
+  #task-filters {
+    Margin-top: 20px;
+    Text-align: center;
+  }
+  
+   #applyFiltersBtn {
+    Padding: 8px 16px;
+    Font-size: 16px;
+    Color: #fff;
+    Background-color: #007BFF;
+    Border: none;
+    Border-radius: 4px;
+    Cursor: pointer;
+    Transition: background-color 0.3s ease;
+  } 
+  
+  #applyFiltersBtn:hover {
+    Background-color: #0056b3;
+  }
+  
+  /* Task list */
+  #task-list {
+    List-style-type: none;
+    Padding: 0;
+    Margin-top: 20px;
+  }
+  
+  #task-list li {
+    Display: flex;
+    Justify-content: space-between;
+    Padding: 10px;
+    Background-color: #fff;
+    Border: 1px solid #ddd;
+    Border-radius: 4px;
+    Margin-bottom: 10px;
+    Box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #task-list li:nth-child(odd) {
+    Background-color: #f1f1f1;
+  }
+  
+  /* Priority colors */
+  #task-list .priority-low {
+    Color: #4CAF50;
+  }
+  
+  #task-list .priority-medium {
+    Color: #FFC107;
+  }
+  
+  #task-list .priority-high {
+    Color: #d9534f;
+  }
+  /* Error Messages */
+  .error-message {
+    Color: red;
+    Font-size: 0.9em;
+    Margin-top: 8px;
+  }
+  #error-message {
+    Color: red;
+    Font-size: 0.9rem;
+  }
+  #error-message.hidden {
+    Display: none;
+  }       
+  </style> 
+       
+</head>
+
+<body> 
+    <div id="task-section">
+      <h2> Tasks Management</h2>
+      <label for="Title">Title</label>
+      <input type="text" id="task-title" placeholder="Task Title">
+      <br>
+      <label for="Description">Description</label>
+      <input type="text" id="task-description" placeholder="Task Description"> <br>
+
+      <label for="date">date</label>
+      <input type="date" id="task-deadline" placeholder="Date"> <br>
+
+      <select id="task-priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addTaskBtn">Add Task</button>
+      <p id="task-error"class="error-message"></p>
+
+      <div id="task-filters">
+        <h3>Filter Tasks</h3>
+        <select id="filter-priority">
+          <option value="all">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="applyFiltersBtn">Apply Filters</button>
+      </div>
+
+      
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+       <script src="./script.js"></script>  
+</body>
+
+</html>
+
+

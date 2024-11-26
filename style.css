@@ -1,0 +1,135 @@
+/* General Reset */
+*{
+    Box-sizing: border-box;
+    Margin: 0;
+    Padding: 0;
+  }
+  
+  Body {
+    Font-family: Arial, sans-serif;
+    Background-color: #f9fafc;
+    Color: #333;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    Min-height: 100vh;
+  }
+  
+  /* Main Container */
+  #app {
+    Width: 90%;
+    Max-width: 600px;
+    Padding: 20px;
+    Background: blue;
+    Border-radius: 10px;
+    Box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    Text-align: center;
+  }
+  
+  /* Headings */
+  H1 {
+    Font-size: 2em;
+    Color: #007bff;
+    Margin-bottom: 10px;
+  }
+  
+  H2 {
+    Font-size: 1.5em;
+    Margin: 15px 0;
+    Color: #333;
+  }
+  
+  /* Forms */
+  Input[type=”text”],
+  Input[type=”email”],
+  Input[type=”password”],
+   select{
+    Width: 90%;
+    Padding:  10px ;
+    Margin: 8px 0;
+    Border: 1px solid #ddd;
+    Border-radius: 10px;
+    Font-size: 16px;
+    box-sizing: border-box;
+   color: white;
+   outline: none;
+   text-align: center; 
+  }  
+  
+   /* input [type='text'], input[type='password'],input[type='email'], select{
+    padding: 10px 70px 10px 0;
+    font-size: 16px;
+    border: none;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    
+      box-sizing: border-box;
+   color: white;
+   outline: none;
+   text-align: center;   
+  } */
+
+
+  Button {
+    Width: 50%;
+    Padding: 12px;
+    Margin-top: 10px;
+    Border: none;
+    Border-radius: 5px;
+    Background-color: #1eff00;
+    Color: #fff;
+    Font-size: 1em;
+    Cursor: pointer;
+  }
+  
+  Button:hover {
+    Background-color: #b35400;
+  }
+  /* Error Messages */
+  .error-message {
+    Color: red;
+    Font-size: 0.9em;
+    Margin-top: 8px;
+  }
+  #error-message {
+    Color: red;
+    Font-size: 0.9rem;
+  }
+  #error-message.hidden {
+    Display: none;
+  }
+  /* Task List */
+  #task-list {
+    List-style-type: none;
+    Padding: 0;
+    Margin-top: 20px;
+  }
+  #task-list li {
+    Background: #f1f5f9;
+    Border: 1px solid #ddd;
+    Padding: 15px;
+    Margin-bottom: 10px;
+    Border-radius: 5px;
+    Text-align: left;
+    Font-size: 1em;
+  }
+  Task Filters 
+  #task-filters {
+    Display: flex;
+    Justify-content: space-between;
+    Align-items: center;
+    Margin-top: 15px;
+  }
+  #task-filters select {
+    Width: 70%;
+  }
+  #task-filters button {
+    Width: 25%;
+  } 
+  
+  
+  
+  
+  
+  
