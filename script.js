@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const taskError = document.getElementById("task-error");
   const taskList = document.getElementById("task-list");
 
-  // Handle Login
+
   document.getElementById("loginBtn").addEventListener("click", async () => {
     loginError.textContent = "";  // Clear previous error messages
     const email = document.getElementById("login-email").value;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Add a new task
+  
   document.getElementById("addTaskBtn").addEventListener("click", async () => { console.log("add Task button clicked")
     taskError.textContent = "";  // Clear previous error messages
     const title = document.getElementById("task-title").value;
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Load tasks from the server
+  
   async function loadTasks(filterPriority = "all") {
     taskList.innerHTML = "";  // Clear existing tasks
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Apply task filter
+  
   document.getElementById("applyFiltersBtn").addEventListener("click", () => {
     const filterPriority = document.getElementById("filter-priority").value;
     loadTasks(filterPriority);
