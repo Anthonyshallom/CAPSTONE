@@ -86,7 +86,7 @@
   Button:hover {
     Background-color: #b35400;
   }
-  /* Error Messages */
+  
   .error-message {
     Color: red;
     Font-size: 0.9em;
@@ -99,7 +99,7 @@
   #error-message.hidden {
     Display: none;
   }
-  /* Task List */
+  
   #task-list {
     List-style-type: none;
     Padding: 0;
